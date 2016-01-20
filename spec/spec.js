@@ -6,9 +6,3 @@ describe('palindrome', function(){
     expect(palindrome('soosoos')).to.equal(true);
   });
 });
-
-describe('oddEven', function(){
-  it('will return true if even | false if uneven', function(){
-    expect(oddEven('anna')).to.equal(true);
-  });
-});

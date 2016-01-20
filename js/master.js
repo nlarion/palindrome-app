@@ -1,20 +1,8 @@
-
-function oddEven(string){
-  if(string.length % 2 === 0){
-    return true;
-  } else {
-    return false;
-  }
-}
-
-var stripText = function(message){
-  return message.toLowerCase().replace(/ /g,'').replace(/[^\w\s]/gi, '');
-};
-
+var stripText = function(message){return message.toLowerCase().replace(/ /g,'').replace(/[^\w\s]/gi, '');};
 function palindrome(string){
   string = stripText(string);
   var splitInt = string.length/2;
-  if(oddEven(string)){
+  if(string.length % 2 === 0){
     var lastPart = string.slice(splitInt);
   }else{
     splitInt = Math.floor(splitInt);
@@ -29,3 +17,12 @@ function palindrome(string){
       return false;
     }
 }
+
+$(document).ready(function(){
+  $("button").click(function(){
+
+    var foo = palindrome($("#palindrome-test").val());
+    $("p").text(foo);
+
+  });
+});
